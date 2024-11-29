@@ -1,0 +1,14 @@
+import pandas as pd 
+# Створення DataFrame:
+data = {'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Los Angeles', 'Chicago']}
+df = pd.DataFrame(data)
+print(df)
+# Імпорт даних з CSV файлу:
+df = pd.read_csv('data.csv')
+print(df.head())  # Показати перші 5 рядків
+# Фільтрація даних:
+# Вибір рядків, де вік більше 30
+df_filtered = df[df['Age'] > 30]
+print(df_filtered)
